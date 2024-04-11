@@ -27,8 +27,9 @@ inicial palabra = head palabra
 superficie:: Float -> Float
 superficie radio = pi * cuadrado radio
 
-esPar,esImpar:: Int -> Bool
+
 --esPar x = (0 || multiploDe2 (x)) == mod 2 x
+esPar,esImpar:: Int -> Bool
 esPar x = 0 == mod x 2
 esImpar x = 1 == mod x 2
 
@@ -46,9 +47,15 @@ factorial x = x * factorial(x - 1)
 --pesoPinoMasDe3:: Int -> Int
 --pesoPinoMasDe3 altura>3 = altura*200+300
 --pesoPino peso = peso*200
+pesoPinoMenosDe3:: Float -> Float
 pesoPinoMenosDe3 altura = min 3 altura
+
+metrosRestantes:: Float -> Float
 metrosRestantes altura = max 0 (altura - 3)
-pesoPino altura = pesoPinoMenosDe3 * 300 + metrosRestantes * 200
+
+--pesoPino:: (metrosRestantes->pesoPino) -> (pesoPinoMenosDe3->metrosRestantes) -> (pesoPinoMenosDe3->pesoPino)
+pesoPino:: Float -> Float
+pesoPino altura = (pesoPinoMenosDe3 altura * 300) + (metrosRestantes altura * 200)
 --esPesoUtil:: Int -> Bool
 
 
