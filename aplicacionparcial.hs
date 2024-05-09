@@ -34,7 +34,12 @@ data Perro = UnPerro {
 }
 ---saludarAlDueño :: Perro -> Bool
 ---saludarAlDueño
-sulta = UnPerro "caniche" saludarAlDueño
+--sulta = UnPerro "caniche" saludarAlDueño
+
+{-
+(&&) :: Bool ->(Bool -> Bool)
+(&&) unBool :: Bool -> Bool
+-}
 
 
 
