@@ -1,4 +1,4 @@
-
+-----------------FOLD---------------------
 calculadora x operacion = foldl1 (.) operacion x
 --calculadora 1 [(+3),(*2)]
 

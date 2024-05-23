@@ -14,6 +14,4 @@ data Crafteo = UnCrafteo {
     materialesNeces :: [Material],
     tiempoDemorado :: Int
 }
-craftearObjeto :: Crafteo -> Personaje
-craftearObjeto objeto = 
-
+--craftearObjeto :: Crafteo -> Personaje
