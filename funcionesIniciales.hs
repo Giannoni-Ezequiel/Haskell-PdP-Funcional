@@ -1,9 +1,5 @@
-cuadrado::Float -> Float
+cuadrado:: Float -> Float
 cuadrado x = x * x
-cuadrado 1 = 1
-cuadrado 2 = 4
-cuadrado 3 = 9
-
 
 doble,triple::Float -> Float
 doble x = x + x
@@ -58,6 +54,12 @@ pesoPino:: Float -> Float
 pesoPino altura = (pesoPinoMenosDe3 altura * 300) + (metrosRestantes altura * 200)
 --esPesoUtil:: Int -> Bool
 
-
---esBisiesto:: Int -> Bool
---esBisiesto anio = (esDivisible anio 4) && not(esDivisible anio 100)
+--“bis sextus dies ante calendas martii” (“repetido el sexto día antes del primer día de marzo”)
+esBisiesto:: Int -> Bool
+esBisiesto anio = (esDivisible anio) && not(esDivisible anio)
+k = numero/numero
+esDivisible:: Int -> Bool
+esDivisible numero = even(numero / 4 numero == 2 * k) && even(numero / 400)
+esbisiesto:: Int -> Bool
+esbisiesto 365 = True
+esbisiesto 366 = False

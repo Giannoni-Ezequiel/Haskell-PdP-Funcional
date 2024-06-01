@@ -22,12 +22,12 @@ sueldoFinal aniosAnt titulo horas
     | aniosAnt >= 24  = (cargo titulo * 2.2) * cantHoras horas
     | otherwise = 1
 
---Funcion que segun la Cantidad de horas
+--Funcion que segun la Cantidad de horas se le asigna un proporcional
 cantHoras:: Float -> Float
 cantHoras horas
     | horas >= 10 = 1
     | horas >= 25 = 3
     | horas >= 20 = 2
     | horas >= 35 = 4
-    | otherwise = 0
+    | otherwise = 1
  
