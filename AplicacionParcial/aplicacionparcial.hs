@@ -41,5 +41,6 @@ data Perro = UnPerro {
 (&&) unBool :: Bool -> Bool
 -}
 
-
+------FLIP
+esExotico nombre = any (flip elem "XKQWxkqw") nombre
 
