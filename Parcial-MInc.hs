@@ -56,7 +56,7 @@ altura (_,_,a) = a
 
 sullivan victima = (gritoGenerado, intensidadGenerada, haceMojarLaCama)
   where gritoGenerado      = map (\ _ -> 'A') (nombre victima) ++ "GH"
-        intensidadGenerada = div 20 edad
+        intensidadGenerada = div 20 edad victima
         haceMojarLaCama    = edad victima < 3
 {-
     take cantA
