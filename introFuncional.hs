@@ -1,3 +1,11 @@
+--------Funcionamiento
+-- comentario
+{- comentarios-}
+--- ghci para correr
+--- stack ghci
+--- :r para recargar
+--- :q salir
+--- :t tipo(*3) (*3) :: Num a => a -> a
 --------TIPADO
 --Consola : enésimoCaracter 5 "Hola Mundo"
 enésimoCaracter n palabra = palabra !! n
@@ -36,5 +44,5 @@ doble1 x = x * 2
 -}
 
 
-estaElem letra = elem (letra "alfonso")
+estaElem letra = elem (letra "alfonso") --se fija que si lo que pasamos como letra, se encuentre como caracter en el string.
  

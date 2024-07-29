@@ -55,7 +55,6 @@ metrosRestantes altura = max 0 (altura - 3)
 pesoPino:: Float -> Float
 pesoPino altura = (pesoPinoMenosDe3 altura * 300) + (metrosRestantes altura * 200)
 --esPesoUtil:: Int -> Bool
-<<<<<<< HEAD
 
 --“bis sextus dies ante calendas martii” (“repetido el sexto día antes del primer día de marzo”)
 esBisiesto:: Int -> Bool
@@ -66,9 +65,3 @@ esDivisible numero = even(numero / 4 numero == 2 * k) && even(numero / 400)
 esbisiesto:: Int -> Bool
 esbisiesto 365 = True
 esbisiesto 366 = False
-=======
---------------------------------------------
-
---esBisiesto:: Int -> Bool
---esBisiesto anio = (esDivisible anio 4) && not(esDivisible anio 100)
->>>>>>> 12ec5e2a759dc507812558164a5f54b9b6d96a8f
