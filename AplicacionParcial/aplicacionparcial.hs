@@ -1,6 +1,5 @@
--- :t (*3)
-
 doble x = 2*x
+-- :t (*3) (*3) :: Num a => a -> a
 
 losDosPrimeros :: [a] -> [a]
 losDosPrimeros lista = take 2 lista
