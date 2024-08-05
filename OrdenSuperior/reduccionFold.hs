@@ -19,6 +19,8 @@ comer (UnHombre nombre peso) (UnaComida cals) = (UnHombre nombre (peso + (cals/1
      y devuelve un nuevo elemento de toda la reduccion/doblaje anterior.
     
     (+) con operacion reduccion, intercalo entre dos y opero. 
+    foldr -- leo de derecha a izquierda
+    foldl1 -- cuando tengo 1, significa que no necesito semilla foldl1 :: (a->a->a) -> [a] -> a
 -}
 
 panzada unHombre comidas = foldl comer unHombre comidas 
