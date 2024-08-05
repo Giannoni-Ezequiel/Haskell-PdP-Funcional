@@ -68,10 +68,12 @@ hayPesadas cartas = any (\c -> peso c > altura c) cartas
 ---FOLD fold :: (a->b->b)->b->([a]->b)
 --fold (+) 0 [1,2,3]
 peleasTotales :: [Carta] -> Int
-peleasTotales cartas = fold(\carta acum -> acum + peleas carta) 0 cartas
+peleasTotales cartas = foldr(\carta acum -> acum + peleas carta) 0 cartas
 --Quiero todos los nombres en un string  intercalados con ";"
 nombreSeparados :: [Carta] -> String
-nombreSeparados cartas = fold(\carta acum -> nombre carta ++ ";" ++ acum) "" cartas
+nombreSeparados cartas = foldr(\carta acum -> nombre carta ++ ";" ++ acum) "" cartas
 --Quiero la carta que tenga la mayor fuerza
 masFuerte :: [Carta] -> Carta
-masFuerte cartas = fold(\carta acum -> carta) (head cartas) (tail cartas)
+masFuerte cartas = foldr(ganaSegunCriterio fuerza) (head cartas) (tail cartas)
+masFuerte1 :: [Carta] -> Carta
+masFuerte1 cartas = foldr1 (ganaSegunCriterio fuerza) cartas
