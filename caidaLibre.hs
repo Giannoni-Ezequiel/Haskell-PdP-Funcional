@@ -1,10 +1,10 @@
-aceleracionGravitaria :: Double
-aceleracionGravitaria = 10
+aceleracionGravitatoria :: Double
+aceleracionGravitatoria = 10
 aceleracionDelObjeto :: Double -> Double
-aceleracionDelObjeto tiempo = tiempo * aceleracionGravitaria
+aceleracionDelObjeto tiempo = tiempo * aceleracionGravitatoria
 distanciaRecorrida :: Double -> Double
 distanciaRecorrida tiempo =
-    1/2 * aceleracionGravitaria * tiempo ^ 2
+    1/2 * aceleracionGravitatoria * tiempo ^ 2
 llegoAlPiso :: Double -> Double -> Bool
 llegoAlPiso altura tiempo =
     altura < distanciaRecorrida tiempo
