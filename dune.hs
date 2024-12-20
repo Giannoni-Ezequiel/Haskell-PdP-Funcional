@@ -5,7 +5,7 @@ data Fremen = UnFremen {
     lvlTolerancia :: Int,
     titulos :: [Titulo],
     cantReconocimientos :: Int
-}deriving Show
+} deriving (Eq, Show) 
 
 nuevoReconocimiento :: Fremen -> Fremen
 nuevoReconocimiento fremen = fremen{cantReconocimientos = cantReconocimientos fremen + 1}
@@ -40,3 +40,32 @@ compararPorReconocimiento fremen1 fremen2
     | (cantReconocimientos fremen1 >= cantReconocimientos fremen2) = fremen1
     | otherwise = fremen2
 
+data Gusano = UnGusano {
+    longitud :: Float,
+    lvlHidratacion :: Int,
+    descripcion :: String
+} deriving (Eq, Show)
+
+gusano1 = UnGusano 10 5 "rojo con lunares"
+gusano2 = UnGusano 8 1 "dientes puntiagudos"
+reproducirGusanos :: Gusano -> Gusano -> Gusano
+reproducirGusanos gusano1 gusano2 = UnGusano{longitud = longitudMax gusano1 gusano2, lvlHidratacion = 0 , descripcion = concatenarDescripciones gusano1 gusano2} 
+
+longitudMax :: Gusano -> Gusano -> Float
+longitudMax gusano1 gusano2 = max(longitud gusano1) (longitud gusano2) * 0.1
+
+concatenarDescripciones :: Gusano -> Gusano -> String
+concatenarDescripciones gusano1 gusano2 = descripcion gusano1 ++ descripcion gusano2 
+
+-------
+ -----------------------MISIONES-------------
+data Mision = UnaMision {
+    fremen :: Fremen,
+    gusano :: Gusano
+} deriving (Show)
+
+
+domarGusano :: Mision -> Fremen
+domarGusano mision1
+    | lvlTolerancia fremen mision1 >= longitud gusano mision1 = (titulo = "Domador") fremen mision1
+    | otherwise        =
