@@ -1,9 +1,12 @@
 cuadrado:: Float -> Float
 cuadrado x = x * x
 
-doble,triple::Float -> Float
-doble x = x + x
-triple x = x * 3
+--doble,triple::Float -> Float
+--doble x = x + x
+--triple x = x * 3
+doble :: Num a => a -> a
+doble x = x * 2
+-- ahora la funcion puede recibir todo tipo numerico
 
 esCero::Int -> Bool
 esCero 0 = True
