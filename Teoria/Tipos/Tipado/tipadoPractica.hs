@@ -7,6 +7,7 @@ xor :: Bool -> Bool -> Bool
 xor a b = False
 xor x y = x || y
 
+--Recursividad:
 fibonacci :: Int -> Int
 --fibonacci x = x + 2
 fibonacci 0 = 0

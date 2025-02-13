@@ -1,11 +1,4 @@
---------Funcionamiento
--- comentario
-{- comentarios-}
---- ghci para correr
---- stack ghci
---- :r para recargar
---- :q salir
---- :t tipo(*3) (*3) :: Num a => a -> a
+
 --------TIPADO
 --Consola : enésimoCaracter 5 "Hola Mundo"
 enésimoCaracter n palabra = palabra !! n
