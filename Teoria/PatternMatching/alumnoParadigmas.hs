@@ -15,7 +15,7 @@ data Nota = Nota {
 id :: Nota -> Nota
 id nota = nota
 ---explotar la nota en su patron, para devolver la nota
---no hay valores mutables, da igual si es la misma nota, lo reconstruyo
+-- no hay valores mutables, da igual si es la misma nota, lo reconstruyo
 id (Nota elValor elDetalle) = Nota elValor elDetalle
 --patron simpatico, para darle nombre a todo un patron
 -- nota lo utilizo para referirme al tipo y al constructor
@@ -42,7 +42,7 @@ aprobado alumno
 subir :: Nota -> Nota
 subir nota = Nota{valor = valor nota + 1, detalle = detalle nota} --una funcion, aca hay constructor
 
---azucar
+-- azucar
 -- cualquier detalle que no modifica queda igual
 -- copia con algunas modificaciones
 subir nota = nota{ valor = valor nota + 1} --aca no hay constructor
